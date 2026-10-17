@@ -7,7 +7,7 @@ Players must type moving words before they reach the edge of the screen. The gam
 
 ## Technologies Used
 
-- C++20
+- C++17
 - SFML 2.x
 - CMake
 - File I/O
@@ -35,6 +35,9 @@ Players must type moving words before they reach the edge of the screen. The gam
 | F3 / F4 | Decrease / increase word speed |
 | F5 | Save game |
 | F6 | Load game |
+| F7 | Switch to Roboto Bold font |
+| F8 | Switch to Roboto Italic font |
+| F9 | Switch to Roboto Regular font |
 | R | Restart after game over |
 | ESC | Exit the game |
 
@@ -48,29 +51,50 @@ Players must type moving words before they reach the edge of the screen. The gam
 - The game ends when all lives are lost.
 
 ## Project Structure
-
 - `main.cpp` — Main game implementation
-- `CMakeLists.txt` — Build configuration
+- `CMakeLists.txt` — CMake build configuration
 - `words.txt` — Word database
+- `Roboto-Regular.ttf` — Regular font
+- `Roboto-Bold.ttf` — Bold font
+- `Roboto-Italic.ttf` — Italic font
+- `OFL.txt` — Roboto font license
 - `Readme.md` — Project documentation
+
 
 ## Requirements
 
-- C++20-compatible compiler
+- C++17-compatible compiler
 - CMake 3.25 or newer
 - SFML 2.x
 - Required font files:
-  - `arial.ttf`
-  - `comic.ttf`
-  - `times.ttf`
+  - `Roboto-Regular.ttf`
+  - `Roboto-Bold.ttf`
+  - `Roboto-Italic.ttf`
+- Font license: SIL Open Font License (`OFL.txt`)
 
 ## Building the Project
 
-The project uses CMake and SFML.
+The project uses CMake and SFML 2.6.
 
-The current CMake configuration targets Windows with MinGW and downloads an SFML 2.5.1 Windows package.
+### macOS
 
-The build configuration and font dependencies may require additional setup when cloning this repository.
+The game has been successfully built and tested on an Apple Silicon Mac using CLion and SFML 2.6.2.
+
+Install SFML using Homebrew:
+
+```bash
+brew install sfml@2
+```
+
+Open the project in CLion, reload CMake, and run the `MonkeyTyperSFML` target.
+
+### Windows
+
+Windows compatibility has not yet been tested.
+
+Building on Windows requires a C++17-compatible compiler, CMake 3.25 or newer, and a compatible installation of SFML 2.6.
+
+The SFML installation path may need to be configured manually.
 
 ## What I Learned
 
