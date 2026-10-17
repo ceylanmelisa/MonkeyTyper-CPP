@@ -70,7 +70,8 @@ int main() {
 
     sf::Font *currentFont = &fontArial;
 
-    std::ifstream wordFile("C:/Users/panah/CLionProjects/untitled/MonkeyTyperSFML/words.txt");
+
+    std::ifstream wordFile("words.txt");
     std::vector<std::string> wordList;
     std::string line;
     while (std::getline(wordFile, line)) {
@@ -278,7 +279,8 @@ int main() {
             }
 
             for (auto it = activeWords.begin(); it != activeWords.end();) {
-                if (trim(userInput) == it->text) {
+
+                if (trim(userInput) == trim(it->text)) {
                     score += 10;
                     userInput = "";
                     it = activeWords.erase(it);
