@@ -61,9 +61,9 @@ int main() {
     //auto comic = sf::Font("C:Users/panah/CLionProjects/untitled/MonkeyTyperSFML/comic.ttf");
 
     sf::Font fontArial, fontComic, fontTimes;
-    if (!fontArial.loadFromFile("arial.ttf") ||
-    !fontComic.loadFromFile("comic.ttf") ||
-    !fontTimes.loadFromFile("times.ttf")) {
+    if (!fontArial.loadFromFile("Roboto-Regular.ttf") ||
+    !fontComic.loadFromFile("Roboto-Bold.ttf") ||
+    !fontTimes.loadFromFile("Roboto-Italic.ttf")) {
         std::cerr << "Font files not found!" << std::endl;
         return 1;
     }
