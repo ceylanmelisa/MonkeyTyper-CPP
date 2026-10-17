@@ -29,10 +29,10 @@ target_link_libraries(MonkeyTyperSFML PRIVATE
 
 # Copy game resources
 foreach(file
-        arial.ttf
-        comic.ttf
-        times.ttf
-        words.txt
+    Roboto-Regular.ttf
+    Roboto-Bold.ttf
+    Roboto-Italic.ttf
+    words.txt
 )
     configure_file(
             "${CMAKE_SOURCE_DIR}/${file}"
